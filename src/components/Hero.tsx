@@ -27,7 +27,7 @@ export default function Hero({ onBook }: HeroProps) {
       {/* Hero image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.jpg`}
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.webp`}
         alt="PadelPark Kleinostheim — Aerial view at night"
         className="absolute inset-0 w-full h-full object-cover object-center"
         fetchPriority="high"
