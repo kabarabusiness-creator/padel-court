@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
@@ -26,13 +25,12 @@ export default function Hero({ onBook }: HeroProps) {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Hero image */}
-      <Image
-        src="/hero.jpg"
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.jpg`}
         alt="PadelPark Kleinostheim — Aerial view at night"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        fetchPriority="high"
       />
 
       {/* Dark overlay — heavy at bottom for text legibility, lighter at top */}
