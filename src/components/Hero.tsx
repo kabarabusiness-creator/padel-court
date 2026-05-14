@@ -23,16 +23,14 @@ export default function Hero({ onBook }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Hero image */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.webp`}
-        alt="PadelPark Kleinostheim — Aerial view at night"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        fetchPriority="high"
-      />
-
+    <section
+      className="relative min-h-screen flex flex-col overflow-hidden"
+      style={{
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.webp)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       {/* Dark overlay — heavy at bottom for text legibility, lighter at top */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/30" />
       {/* Extra left-side darkness for text contrast */}
